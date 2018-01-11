@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --verbose",
     "coverage": "node_modules/.bin/react-scripts test --env=jsdom --coverage --verbose",
@@ -17,9 +18,12 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.2",
+    "prop-types": "^15.6.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "react-scripts": "1.0.12",
+    "react-tweet-embed": "^1.0.8",
+    "react-twitter-embedded-timeline": "^0.4.0",
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
