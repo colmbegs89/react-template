@@ -18,10 +18,12 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.2",
+    "jquery": "^3.2.1",
     "prop-types": "^15.6.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "react-scripts": "1.0.12",
+    "react-slick": "^0.16.0",
     "react-tweet-embed": "^1.0.8",
     "react-twitter-embedded-timeline": "^0.4.0",
     "xml2js": "^0.4.19"
@@ -41,7 +43,8 @@
       "!**/coverage/**",
       "!src/index.js",
       "!src/registerServiceWorker.js",
-      "!**/stub_data/**"
+      "!**/stub_data/**",
+      "!**src/setupTests.js"
     ],
     "coverageThreshold": {
       "global": {

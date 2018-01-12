@@ -13,7 +13,10 @@ describe('App', () => {
   it('has a defined structure', () => {
     const wrapper = shallow(<App />)
 
-    expect(wrapper.find('#appNavBar')).to.have.length(1)
-    expect(wrapper.find('.navbar')).to.have.length(1)
+    expect(wrapper.find('.App')).to.have.length(1)
+    expect(wrapper.find('.container-fluid')).to.have.length(2)
+    expect(wrapper.find('#body')).to.have.length(1)
+    expect(wrapper.find('.row')).to.have.length(4)
+    expect(wrapper.find('footer')).to.have.length(1)
   })
 })

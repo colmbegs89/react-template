@@ -2,11 +2,13 @@ import React, { Component } from 'react'
 import logo from './img/dcsdc.png'
 import foyle2018 from './img/FMF-logo2018.png'
 import homecoming2018 from './img/Homecoming-v2.png'
-import slider1 from './img/FMF2018_New_Slider_Dec.jpg'
+// import slider1 from './img/FMF2018_New_Slider_Dec.jpg'
 import eventLogo1 from './img/clipper18.png'
 import eventLogo2 from './img/visit-derry.png'
 import TwitterTimeline from 'react-twitter-embedded-timeline'
 import './App.css'
+import Carousel from './components/Carousel.js'
+// import { Carousel } from 'react-responsive-carousel';
 
 class App extends Component {
 
@@ -43,7 +45,9 @@ class App extends Component {
         </header>
         <div id='body' className='row'>
           <div className='container-fluid'>
-            <img id='img' src={slider1} className='img-responsive' alt='Offical Host Port Clipper 2017 2018 Race' />
+          <Carousel />
+
+            {/* <img id='img' src={slider1} className='img-responsive' alt='Offical Host Port Clipper 2017 2018 Race' /> */}
           </div>
         </div>
         <div className='section' id='recent-projects' >
@@ -169,6 +173,11 @@ class App extends Component {
             </div>
           </div>
         </footer>
+
+      {/* <div className='row'>
+
+        <DemoCarousel />
+      </div> */}
       </div>
     )
   }

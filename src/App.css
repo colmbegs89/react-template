@@ -4,7 +4,17 @@
   .twitter-timeline {
     height: 30px
   }
-  
+  .sliderTest {
+    display: 'inline-block'
+  }
+  /* Issue With Arrows on Carousel */
+  .slick-next {
+    right: -2px;
+  }
+  .slick-prev {
+    left: -2px;
+  }
+   
   /* .App-logo {
     height: 30px;
   } */
