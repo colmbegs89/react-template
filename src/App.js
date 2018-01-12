@@ -11,7 +11,7 @@ import Carousel from './components/Carousel.js'
 // import { Carousel } from 'react-responsive-carousel';
 
 class App extends Component {
-
+ 
   render () {
     return (
       <div className='App '>
@@ -176,7 +176,6 @@ class App extends Component {
 
       {/* <div className='row'>
 
-        <DemoCarousel />
       </div> */}
       </div>
     )
