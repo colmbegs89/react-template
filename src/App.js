@@ -1,24 +1,36 @@
 import React, { Component } from 'react'
-import logo from './img/dcsdc.png'
-import foyle2018 from './img/FMF-logo2018.png'
-import homecoming2018 from './img/Homecoming-v2.png'
-// import slider1 from './img/FMF2018_New_Slider_Dec.jpg'
-import eventLogo1 from './img/clipper18.png'
-import eventLogo2 from './img/visit-derry.png'
+import councillogo from './img/dcsdc.png'
+import headerLogo1 from './img/FMF-logo2018.png'
+import headerLogo2 from './img/Homecoming-v2.png'
+import eventLogo1 from './img/visit-derry.png'
+import eventLogo2 from './img/clipper18.png'
 import TwitterTimeline from 'react-twitter-embedded-timeline'
 import './App.css'
 import Carousel from './components/Carousel.js'
-// import { Carousel } from 'react-responsive-carousel';
 
 class App extends Component {
  
   render () {
+    let bodyContent = 'test'
+    let headerAlt1 = 'Foyle Maritime Festival 2018'
+    let headerAlt2 = 'Join Homecoming July 2018'
+    let eventAlt2 = 'Clipper 17-18'
+    let eventAlt1 = 'Visit Derry'
+    let socialHashtags = '#FoyleMaritime | #TeamDLD | #DerryClipper'
+    let facebookUrl = 'https://www.facebook.com/foylemaritimefestival'
+    let twitterUrl = 'https://twitter.com/foylemaritime'
+    let youtubeUrl = 'https://www.youtube.com/channel/UCXxDAlu790v9MnTWyZfjSUQ'
+    let instagramUrl = 'https://www.instagram.com/foylemaritime/'
+    let twitterWidget = '395843229469270016'
+    let mailToAddress = 'foylemaritime@derrystrabane.com'
+
+
     return (
       <div className='App '>
         <header>
           <div className='container-fluid'>
-            <img id='headerLogo' src={foyle2018} className='App-Logo col-xs-6 col-sm-6 col-md-5 col-lg-5' alt='Foyle Maritime Festival 2018' />
-            <img id='headerLogo' src={homecoming2018} className='col-xs-6 col-sm-6 col-md-6 col-lg-6' alt='Join Homecoming July 2018' />
+            <img id='headerLogo' src={headerLogo1} className='col-xs-6 col-sm-6 col-md-5 col-lg-5' alt={headerAlt1} />
+            <img id='headerLogo' src={headerLogo2} className='col-xs-6 col-sm-6 col-md-6 col-lg-6' alt={headerAlt2} />
           </div>
           <div className='nav-wrapper' >
             <nav className='navbar ' >
@@ -45,30 +57,14 @@ class App extends Component {
         </header>
         <div id='body' className='row'>
           <div className='container-fluid'>
-          <Carousel />
-
-            {/* <img id='img' src={slider1} className='img-responsive' alt='Offical Host Port Clipper 2017 2018 Race' /> */}
+            <Carousel />
           </div>
         </div>
         <div className='section' id='recent-projects' >
           <div className='container'>
             <div className='row'>
               <div className='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-                <h1><strong>Foyle Maritime Returns</strong></h1>
-                <p>&nbsp;</p>
-                <p>The Foyle Maritime Festival returns to Derry~Londonderry from  14th – 22nd July 2018 and will host the stopover of the  Clipper Race 2017-18 as they near the end of their Round the World Journey.</p>
-                <p>        Queens Quay  will once again be transformed into a maritime wonderland full of fun,  activities, music, arts and crafts as we prepare to welcome the Clipper Race  yachts back! <a href='http://www.derrystrabane.com/Council/News/Clipper-Race-set-to-return-to-City-in-2018'>Read More Here</a></p>
-                <p><a href='http://www.visitderry.com/'>Book  Accommodation</a> <br/>
-                </p>
-                <p><a href='mailto:foylemaritime@derrystrabane.com'>Opportunities for your Business</a>  <br/>
-                </p>
-                <p><a href='mailto:media@derrystrabane.com'>Media Enquiries</a></p>
-                <p>
-                </p>
-                {/* <div className='embed-container'> */}
-                <iframe title='test' src='https://www.youtube.com/embed/vRpGj1zY2F0' frameBorder='0' allowFullScreen=''  width="100%"/>
-                {/* </div> */}
-                <p></p>
+                {bodyContent}
               </div>
             </div>
           </div>
@@ -77,10 +73,9 @@ class App extends Component {
           <div className='container'>
             <div className='container clients logo-contain'>
               <div className='row'>
-                <div className='col-lg-4 col-md-4 col-sm-4 col-xs-4'><img className='img-responsive' src={eventLogo2} alt='Clipper 17-18'/> </div>
-                <div className='col-lg-4 col-md-4 col-sm-4 col-xs-4'> <img className='img-responsive' src={logo} alt='Derry City and Strabane District Council'/> </div>
-                <div className='col-lg-4 col-md-4 col-sm-4 col-xs-4'></div>
-                <span className='col-lg-4 col-md-4 col-sm-4 col-xs-4'><img className='img-responsive' src={eventLogo1} alt='Visit Derry'/></span>
+                <div className='col-lg-4 col-md-4 col-sm-4 col-xs-4'><img className='img-responsive' src={eventLogo1} alt={eventAlt1}/> </div>
+                <div className='col-lg-4 col-md-4 col-sm-4 col-xs-4'> <img className='img-responsive' src={councillogo} alt='Derry City and Strabane District Council'/> </div>
+                <span className='col-lg-4 col-md-4 col-sm-4 col-xs-4'><img className='img-responsive' src={eventLogo2} alt={eventAlt2}/></span>
               </div>
             </div>
           </div>
@@ -92,10 +87,10 @@ class App extends Component {
             <div className='row'>
               <div className='col-lg-3 col-md-3'>
                 <h3>GET SOCIAL</h3>
-                <p>#FoyleMaritime | #TeamDLD | #DerryClipper </p>
+                <p>{socialHashtags}</p>
                 <ul className='list-inline list-unstyled social-networks'>
                   <li>
-                    <a href='https://www.facebook.com/foylemaritimefestival'>
+                    <a href={facebookUrl}>
                       <div className='icon-social icon-social-facebook normal'>
                         <i className='fa fa-facebook'></i>
                       </div>
@@ -105,7 +100,7 @@ class App extends Component {
                     </a>
                   </li>
                   <li>
-                    <a href='https://twitter.com/foylemaritime '>
+                    <a href={twitterUrl}>
                       <div className='icon-social icon-social-twitter normal'>
                         <i className='fa fa-twitter'></i>
                       </div>
@@ -115,7 +110,7 @@ class App extends Component {
                     </a>
                   </li>
                   <li>
-                    <a href='https://www.youtube.com/channel/UCXxDAlu790v9MnTWyZfjSUQ'>
+                    <a href={youtubeUrl}>
                       <div className='icon-social icon-social-youtube normal'>
                         <i className='fa fa-youtube'></i>
                       </div>
@@ -125,7 +120,7 @@ class App extends Component {
                     </a>
                   </li>
                   <li>
-                    <a href='https://www.instagram.com/foylemaritime/ '>
+                    <a href={instagramUrl}>
                       <div className='icon-social icon-social-instagram normal'>
                         <i className='fa fa-instagram'></i>
                       </div>
@@ -144,18 +139,22 @@ class App extends Component {
                   Derry, <br/>
                   BT48 7NN <br/>
                   <i className='fa fa-phone'></i> (028) 71 253 253<br/>
-                  <a href='mailto:foylemaritime@derrystrabane.com'>foylemaritime@derrystrabane.com</a>
+                  <a href={'mailto:' + mailToAddress}>{mailToAddress}</a>
                 </address>
               </div>
               <div className='col-lg-3 col-md-3'>
                 <h3>LATEST TWEETS</h3>
                 <div id='tweeter' className='twitter-timeline twitter-timeline-rendered'>
-                  <TwitterTimeline widgetId='395843229469270016' chrome='noborders noheader' height={300} />
+                  <TwitterTimeline widgetId={twitterWidget} chrome='noborders noheader' height={300} />
                 </div>
               </div>
               <div className='col-lg-3 col-md-3'>
                 <h3>NEWSLETTER            </h3>
                 <div className='input-group'>
+               
+               
+               
+                {/* ASK CIARAN ABOUT THIS  */}
                   <link href='//cdn-images.mailchimp.com/embedcode/slim-081711.css' rel='stylesheet' type='text/css'/>
                   <div id='mc_embed_signup'>
                     <form action='//derrycityandstrabanedistrict.us9.list-manage.com/subscribe/post?u=af21a5655b0fdf68785275e32&amp;id=4978b17613' method='post' id='mc-embedded-subscribe-form' name='mc-embedded-subscribe-form' className='validate' target='_blank' noValidate=''>
@@ -169,6 +168,8 @@ class App extends Component {
                         <div className='clear'><input type='submit' value='Subscribe' name='subscribe' id='mc-embedded-subscribe' className='button'/></div>
                       </div>
                     </form>
+                {/* ASK CIARAN ABOUT THIS  */}
+
                   </div>
                 </div>
               </div>

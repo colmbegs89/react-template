@@ -1,6 +1,15 @@
 .App {
     text-align: center;
   }
+
+  .fa:hover {
+      opacity: 0.7;
+  }
+  /* .fa {
+    width: 30px;
+    text-align: center;
+    border-radius: 60%;
+  } */
   .twitter-timeline {
     height: 30px
   }
