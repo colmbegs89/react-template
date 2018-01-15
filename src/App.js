@@ -53,7 +53,7 @@ class App extends Component {
         <div className='section' id='recent-projects' >
           <div className='container'>
             <div className='row'>
-              <div className='col-lg-12'>
+              <div className='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
                 <h1><strong>Foyle Maritime Returns</strong></h1>
                 <p>&nbsp;</p>
                 <p>The Foyle Maritime Festival returns to Derry~Londonderry from  14th – 22nd July 2018 and will host the stopover of the  Clipper Race 2017-18 as they near the end of their Round the World Journey.</p>
@@ -65,7 +65,9 @@ class App extends Component {
                 <p><a href='mailto:media@derrystrabane.com'>Media Enquiries</a></p>
                 <p>
                 </p>
-                <div className='embed-container'><iframe title='test' src='https://www.youtube.com/embed/vRpGj1zY2F0' frameBorder='0' allowFullScreen=''></iframe></div>
+                {/* <div className='embed-container'> */}
+                <iframe title='test' src='https://www.youtube.com/embed/vRpGj1zY2F0' frameBorder='0' allowFullScreen=''  width="100%"/>
+                {/* </div> */}
                 <p></p>
               </div>
             </div>
@@ -148,7 +150,7 @@ class App extends Component {
               <div className='col-lg-3 col-md-3'>
                 <h3>LATEST TWEETS</h3>
                 <div id='tweeter' className='twitter-timeline twitter-timeline-rendered'>
-                  <TwitterTimeline widgetId='395843229469270016' chrome='noborders noheader' limit={2} />
+                  <TwitterTimeline widgetId='395843229469270016' chrome='noborders noheader' height={300} />
                 </div>
               </div>
               <div className='col-lg-3 col-md-3'>
@@ -173,10 +175,6 @@ class App extends Component {
             </div>
           </div>
         </footer>
-
-      {/* <div className='row'>
-
-      </div> */}
       </div>
     )
   }
