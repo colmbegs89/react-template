@@ -4,12 +4,49 @@ import headerLogo1 from '../img/FMF-logo2018.png'
 import headerLogo2 from '../img/Homecoming-v2.png'
 import eventLogo1 from '../img/visit-derry.png'
 import eventLogo2 from '../img/clipper18.png'
+import pageImage from '../img/about.jpg'
 import TwitterTimeline from 'react-twitter-embedded-timeline'
 
 export class About extends Component {
- 
+
+  //Place the body inside of the 'bodyDiv'
+ getDefinedBody () {
+   let breadcrumb = 'About Derry~Londonderry'
+   return (
+    <div className='bodyDiv'>
+    <div className=' col-lg-1 col-md-1 col-sm-1'/>
+      <div className='bodyDiv center-block col-lg-10 col-md-19 col-sm-10 col-xs-12'>
+        <ol className="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li className="active">{breadcrumb}</li>
+        </ol>
+        <div className="row center-block">
+          <div className="col-lg-12">
+            <h2><img className="img-responsive center-block" src={pageImage} width="1000" height="666" alt="LegenDerry  Maritime Festival - Music  City" /></h2>
+            <p><strong>Time Zone: </strong>GMT +1 <strong><br/>
+              Currency: </strong>Pound Sterling<br/>
+            </p>
+            <p>The vibrant  city of Derry~Londonderry is set alongside the banks of the River Foyle in the  North West of Ireland. Close to Strabane, a large rural area dominated by the  heather-clad Sperrin Mountains, the area is a gateway to the famous Irish  coastal routes of the Wild Atlantic Way and the Causeway Coast.</p>
+            <p>The area has strong sporting, music, political and cultural connections with two Nobel Prize  winners hailing from the region.&nbsp; <br/>
+              Derry is the  only completely walled city in Ireland and the UK and stands at 400 years old.  A visit will encompass 1450 years of history including the Siege of Derry and  the Battle of the Bogside.
+            </p>
+            <p>Stroll across&nbsp;Peace Bridge&nbsp;which curves across the River Foyle&nbsp; and  leads to Ebrington Square to visit the emerging Waterside area of the city,  home to some of the newest restaurants and bars.Known for its warm hospitality,  a visit to Derry’s lively pubs for a Guinness, live music and plenty of craic  is a must.</p>
+            <p>The Sperrin  Mountain range in Strabane&nbsp;is one of Ireland’s largest mountain ranges yet  one of the most unexplored on the Island. It is a designated area of  outstanding natural beauty and very appealing for hikers.</p>
+            <p>The Derry  City and Strabane District is a hub of culture, optimism and creativity.&nbsp;  Famed for the kindness and generous spirit of its people, it has the confident  outlook of an area emerging from a troubled past.</p>
+            <p>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className=' col-lg-1 col-md-1 col-sm-1'/>
+    </div>
+   )
+ }
+
+
   render () {
-    let bodyContent = 'test'
+    let pageHeader = 'About Us'
+    let bodyContent = this.getDefinedBody()
     let headerAlt1 = 'Foyle Maritime Festival 2018'
     let headerAlt2 = 'Join Homecoming July 2018'
     let eventAlt2 = 'Clipper 17-18'
@@ -57,7 +94,7 @@ export class About extends Component {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <h1 className="page-header">About Us</h1>
+            <h1 className="page-header">{pageHeader}</h1>
           </div>
         </div>
       </div>
@@ -65,9 +102,7 @@ export class About extends Component {
     <div className='section' id='recent-projects' >
           <div className='container'>
             <div className='row'>
-              <div className='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
                 {bodyContent}
-              </div>
             </div>
           </div>
         </div>

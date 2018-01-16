@@ -4,12 +4,77 @@ import headerLogo1 from '../img/FMF-logo2018.png'
 import headerLogo2 from '../img/Homecoming-v2.png'
 import eventLogo1 from '../img/visit-derry.png'
 import eventLogo2 from '../img/clipper18.png'
+//Hotel Images
+import hotel1 from '../img/travel-lodge.jpg'
+
 import TwitterTimeline from 'react-twitter-embedded-timeline'
+import Hotel from './Hotel.js'
 
 export class Accommodation extends Component {
+
+  getDefinedBody () {
+    let breadcrumb = 'Accommodation Offers'
+    const hotelData = [
+      {
+        title:'Derry City Travelodge Hotel',
+        body: "The Derry Travelodge is centrally located in  the heart of the city with views of the River Foyle. Our hotel is situated on  Strand Street which is popular for nightlife, restaurants, shopping and minutes’  walk from Derry City’s many attractions",
+        telephone:'+44 (0)870 1 911 733', 
+        email:'derry@travelodge.ie',
+        web:'http://www.travelodge.ie/hotels/225/Derry-hotel',
+        image: hotel1
+      },
+      {
+        title:'Derry City Travelodge Hotel',
+        body: "The Derry Travelodge is centrally located in  the heart of the city with views of the River Foyle. Our hotel is situated on  Strand Street which is popular for nightlife, restaurants, shopping and minutes’  walk from Derry City’s many attractions",
+        telephone:'+44 (0)870 1 911 733', 
+        email:'derry@travelodge.ie',
+        web:'http://www.travelodge.ie/hotels/225/Derry-hotel',
+        image: hotel1
+      },
+      {
+        title:'Derry City Travelodge Hotel',
+        body: "The Derry Travelodge is centrally located in  the heart of the city with views of the River Foyle. Our hotel is situated on  Strand Street which is popular for nightlife, restaurants, shopping and minutes’  walk from Derry City’s many attractions",
+        telephone:'+44 (0)870 1 911 733', 
+        email:'derry@travelodge.ie',
+        web:'http://www.travelodge.ie/hotels/225/Derry-hotel',
+        image: hotel1
+      }
+    ]
+
+    return (
+     <div className='bodyDiv'>
+     <div className=' col-lg-1 col-md-1 col-sm-1'/>
+       <div className='bodyDiv center-block col-lg-10 col-md-19 col-sm-10 col-xs-12'>
+         <ol className="breadcrumb">
+           <li><a href="/">Home</a></li>
+           <li className="active">{breadcrumb}</li>
+         </ol>
+         <div className="row center-block">
+           <div className="col-lg-12">
+             {/* <h2><img className="img-responsive center-block" src={pageImage} width="1000" height="666" alt="LegenDerry  Maritime Festival - Music  City" /></h2> */}
+              
+              <Hotel hotelInformation={hotelData} />
+             <div className="col-lg-12">
+                <p>Full  accommodation enquiries please contact:<br/>
+                  <br/>
+                  Visit Derry City <br/>
+                  T: (028) 7137 7577<br/>
+                  F: (028) 7137 7992<br/>
+                  E:&nbsp;<a href="mailto:info@visitderry.com">info@visitderry.com</a><br/>
+                  W:&nbsp;<a href="http://www.visitderry.com/">www.visitderry.com</a></p>
+               <p>&nbsp;</p>
+              </div>
+           </div>
+         </div>
+       </div>
+       <div className=' col-lg-1 col-md-1 col-sm-1'/>
+     </div>
+    )
+  }
  
   render () {
-    let bodyContent = 'test'
+    let pageHeader = 'Accommodation'
+    let bodyContent = this.getDefinedBody()
     let headerAlt1 = 'Foyle Maritime Festival 2018'
     let headerAlt2 = 'Join Homecoming July 2018'
     let eventAlt2 = 'Clipper 17-18'
@@ -24,50 +89,47 @@ export class Accommodation extends Component {
 
     return (
       <div className='Accommodation'>
-       <header>
-       <div className='container-fluid'>
-         <img id='headerLogo' src={headerLogo1} className='col-xs-6 col-sm-6 col-md-5 col-lg-5' alt={headerAlt1} />
-         <img id='headerLogo' src={headerLogo2} className='col-xs-6 col-sm-6 col-md-6 col-lg-6' alt={headerAlt2} />
-       </div>
-       <div className='nav-wrapper' >
-         <nav className='navbar ' >
-           <div className='container'>
-             <div className='collapse navbar-collapse' >
-               <ul className='nav navbar-nav navbar-right'>
-                 <li><a className='navText' href='/' >Home</a></li>
-                 <li className='dropdown'>
-                   <a className='dropdown-toggle navText' data-toggle='dropdown'>Our Story </a>
-                   <ul className='dropdown-menu navText'>
-                     <li><a className='navText' href='/about' >About</a></li>
-                     <li className=' divider'></li>
-                     <li><a className='navText' href='/accommodation' >Your Stay</a></li>
-                     <li className='divider'></li>
-                     <li><a className='navText' href='/yourboat' >Your Boat</a></li>
-                   </ul>
-                 </li>
-                 <li><a className='navText' href='/contact' >Contact</a></li>
-               </ul>
-             </div>
-           </div>
-         </nav>
-       </div>
-     </header>
-     <div className="section-header">
+        <header>
+        <div className='container-fluid'>
+          <img id='headerLogo' src={headerLogo1} className='col-xs-6 col-sm-6 col-md-5 col-lg-5' alt={headerAlt1} />
+          <img id='headerLogo' src={headerLogo2} className='col-xs-6 col-sm-6 col-md-6 col-lg-6' alt={headerAlt2} />
+        </div>
+        <div className='nav-wrapper' >
+          <nav className='navbar ' >
+            <div className='container'>
+              <div className='collapse navbar-collapse' >
+                <ul className='nav navbar-nav navbar-right'>
+                  <li><a className='navText' href='/' >Home</a></li>
+                  <li className='dropdown'>
+                    <a className='dropdown-toggle navText' data-toggle='dropdown'>Our Story </a>
+                    <ul className='dropdown-menu navText'>
+                      <li><a className='navText' href='/about' >About</a></li>
+                      <li className=' divider'></li>
+                      <li><a className='navText' href='/accommodation' >Your Stay</a></li>
+                      <li className='divider'></li>
+                      <li><a className='navText' href='/yourboat' >Your Boat</a></li>
+                    </ul>
+                  </li>
+                  <li><a className='navText' href='/contact' >Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div className="section-header">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <h1 className="page-header">Accommodation</h1>
+            <h1 className="page-header">{pageHeader}</h1>
           </div>
         </div>
       </div>
-
     </div>
     <div className='section' id='recent-projects' >
           <div className='container'>
             <div className='row'>
-              <div className='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
                 {bodyContent}
-              </div>
             </div>
           </div>
         </div>
@@ -169,8 +231,9 @@ export class Accommodation extends Component {
               </div>
             </div>
           </div>
-        </footer>     
-  </div>
+        </footer>
+    </div>
+
 
     )
   }

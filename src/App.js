@@ -11,9 +11,14 @@ import eventLogo2 from './img/clipper18.png'
 import TwitterTimeline from 'react-twitter-embedded-timeline'
 
 export class App extends Component {
- 
+
+ test () {
+   return (
+     <div>TEST</div>
+   )
+ }
   render () {
-    let bodyContent = 'test'
+    let bodyContent = this.test()
     let headerAlt1 = 'Foyle Maritime Festival 2018'
     let headerAlt2 = 'Join Homecoming July 2018'
     let eventAlt2 = 'Clipper 17-18'
@@ -25,6 +30,7 @@ export class App extends Component {
     let instagramUrl = 'https://www.instagram.com/foylemaritime/'
     let twitterWidget = '395843229469270016'
     let mailToAddress = 'event@derrystrabane.com'
+
 
     return (
       <div className='App '>
