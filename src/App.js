@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
+import './App.css'
+import Carousel from './components/Carousel.js'
+
+// Images
 import councillogo from './img/dcsdc.png'
 import headerLogo1 from './img/FMF-logo2018.png'
 import headerLogo2 from './img/Homecoming-v2.png'
 import eventLogo1 from './img/visit-derry.png'
 import eventLogo2 from './img/clipper18.png'
 import TwitterTimeline from 'react-twitter-embedded-timeline'
-import './App.css'
-import Carousel from './components/Carousel.js'
-// import Users from './components/Users.js'
-// import Routes from './components'
+
 export class App extends Component {
  
   render () {
@@ -23,8 +24,7 @@ export class App extends Component {
     let youtubeUrl = 'https://www.youtube.com/channel/UCXxDAlu790v9MnTWyZfjSUQ'
     let instagramUrl = 'https://www.instagram.com/foylemaritime/'
     let twitterWidget = '395843229469270016'
-    let mailToAddress = 'foylemaritime@derrystrabane.com'
-
+    let mailToAddress = 'event@derrystrabane.com'
 
     return (
       <div className='App '>
