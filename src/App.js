@@ -38,18 +38,18 @@ export class App extends Component {
               <div className='container'>
                 <div className='collapse navbar-collapse' >
                   <ul className='nav navbar-nav navbar-right'>
-                    <li><a className='navText'>Home</a></li>
+                    <li><a className='navText' href='/' >Home</a></li>
                     <li className='dropdown'>
                       <a className='dropdown-toggle navText' data-toggle='dropdown'>Our Story </a>
                       <ul className='dropdown-menu navText'>
-                        <li><a className='navText'>About</a></li>
+                        <li><a className='navText' href='/about' >About</a></li>
                         <li className=' divider'></li>
-                        <li><a className='navText'>Your Stay</a></li>
+                        <li><a className='navText' href='/accommodation' >Your Stay</a></li>
                         <li className='divider'></li>
-                        <li><a className='navText'>Your Boat</a></li>
+                        <li><a className='navText' href='/yourboat' >Your Boat</a></li>
                       </ul>
                     </li>
-                    <li><a className='navText'>Contact</a></li>
+                    <li><a className='navText' href='/contact' >Contact</a></li>
                   </ul>
                 </div>
               </div>
@@ -70,7 +70,7 @@ export class App extends Component {
             </div>
           </div>
         </div>
-        <div className='section-colored'>
+        <div className='section-colored col-lg-12 col-md-12 col-sm-12 col-xs-12'>
           <div className='container'>
             <div className='container clients logo-contain'>
               <div className='row'>
@@ -85,7 +85,7 @@ export class App extends Component {
         </div>
         <footer>
           <div className='container'>
-            <div className='row'>
+            <div className='row col-lg-12 col-md-12 col-sm-12 col-xs-12'>
               <div className='col-lg-3 col-md-3'>
                 <h3>GET SOCIAL</h3>
                 <p>{socialHashtags}</p>
@@ -171,9 +171,6 @@ export class App extends Component {
             </div>
           </div>
         </footer>
-        <div id='routertest'>
-        {/* <Route path='/users' component={Users} /> */}
-        </div>
       </div>
     )
   }

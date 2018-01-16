@@ -6,7 +6,7 @@ import eventLogo1 from '../img/visit-derry.png'
 import eventLogo2 from '../img/clipper18.png'
 import TwitterTimeline from 'react-twitter-embedded-timeline'
 
-export class Contact extends Component {
+export class YourBoat extends Component {
  
   render () {
     let bodyContent = 'test'
@@ -24,7 +24,7 @@ export class Contact extends Component {
 
 
     return (
-      <div className='Contact'>
+      <div className='YourBoat'>
        <header>
        <div className='container-fluid'>
          <img id='headerLogo' src={headerLogo1} className='col-xs-6 col-sm-6 col-md-5 col-lg-5' alt={headerAlt1} />
@@ -57,7 +57,7 @@ export class Contact extends Component {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <h1 className="page-header">Contact Us</h1>
+            <h1 className="page-header">Your Boat</h1>
           </div>
         </div>
       </div>
@@ -82,7 +82,6 @@ export class Contact extends Component {
             </div>
           </div>
         </div>
-        
     <footer>
           <div className='container'>
             <div className='row col-lg-12 col-md-12 col-sm-12 col-xs-12'>
@@ -171,10 +170,10 @@ export class Contact extends Component {
             </div>
           </div>
         </footer>
-    </div>
+     </div>
 
     )
   }
 }
 
-export default Contact
+export default YourBoat

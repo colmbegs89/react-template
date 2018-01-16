@@ -6,10 +6,10 @@ import eventLogo1 from '../img/visit-derry.png'
 import eventLogo2 from '../img/clipper18.png'
 import TwitterTimeline from 'react-twitter-embedded-timeline'
 
-export class Contact extends Component {
+export class About extends Component {
  
   render () {
-    let bodyContent = 'test'
+    let bodyContent = this.props.body
     let headerAlt1 = 'Foyle Maritime Festival 2018'
     let headerAlt2 = 'Join Homecoming July 2018'
     let eventAlt2 = 'Clipper 17-18'
@@ -24,44 +24,36 @@ export class Contact extends Component {
 
 
     return (
-      <div className='Contact'>
-       <header>
-       <div className='container-fluid'>
-         <img id='headerLogo' src={headerLogo1} className='col-xs-6 col-sm-6 col-md-5 col-lg-5' alt={headerAlt1} />
-         <img id='headerLogo' src={headerLogo2} className='col-xs-6 col-sm-6 col-md-6 col-lg-6' alt={headerAlt2} />
-       </div>
-       <div className='nav-wrapper' >
-         <nav className='navbar ' >
-           <div className='container'>
-            <div className='collapse navbar-collapse' >
-              <ul className='nav navbar-nav navbar-right'>
-                <li><a className='navText' href='/' >Home</a></li>
-                <li className='dropdown'>
-                  <a className='dropdown-toggle navText' data-toggle='dropdown'>Our Story </a>
-                  <ul className='dropdown-menu navText'>
-                    <li><a className='navText' href='/about' >About</a></li>
-                    <li className=' divider'></li>
-                    <li><a className='navText' href='/accommodation' >Your Stay</a></li>
-                    <li className='divider'></li>
-                    <li><a className='navText' href='/yourboat' >Your Boat</a></li>
-                  </ul>
-                </li>
-                <li><a className='navText' href='/contact' >Contact</a></li>
-              </ul>
-            </div>
-           </div>
-         </nav>
-       </div>
-     </header>
-     <div className="section-header">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-            <h1 className="page-header">Contact Us</h1>
-          </div>
+      <div className={this.props.title}>
+        <header>
+        <div className='container-fluid'>
+          <img id='headerLogo' src={headerLogo1} className='col-xs-6 col-sm-6 col-md-5 col-lg-5' alt={headerAlt1} />
+          <img id='headerLogo' src={headerLogo2} className='col-xs-6 col-sm-6 col-md-6 col-lg-6' alt={headerAlt2} />
         </div>
-      </div>
-    </div>
+        <div className='nav-wrapper' >
+          <nav className='navbar ' >
+            <div className='container'>
+              <div className='collapse navbar-collapse' >
+                <ul className='nav navbar-nav navbar-right'>
+                  <li><a className='navText' href='/' >Home</a></li>
+                  <li className='dropdown'>
+                    <a className='dropdown-toggle navText' data-toggle='dropdown'>Our Story </a>
+                    <ul className='dropdown-menu navText'>
+                      <li><a className='navText' href='/about' >About</a></li>
+                      <li className=' divider'></li>
+                      <li><a className='navText' href='/accommodation' >Your Stay</a></li>
+                      <li className='divider'></li>
+                      <li><a className='navText' href='/yourboat' >Your Boat</a></li>
+                    </ul>
+                  </li>
+                  <li><a className='navText' href='/contact' >Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
     <div className='section' id='recent-projects' >
           <div className='container'>
             <div className='row'>
@@ -82,7 +74,6 @@ export class Contact extends Component {
             </div>
           </div>
         </div>
-        
     <footer>
           <div className='container'>
             <div className='row col-lg-12 col-md-12 col-sm-12 col-xs-12'>
@@ -177,4 +168,4 @@ export class Contact extends Component {
   }
 }
 
-export default Contact
+export default About
