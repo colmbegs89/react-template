@@ -7,8 +7,9 @@ import eventLogo2 from './img/clipper18.png'
 import TwitterTimeline from 'react-twitter-embedded-timeline'
 import './App.css'
 import Carousel from './components/Carousel.js'
-
-class App extends Component {
+// import Users from './components/Users.js'
+// import Routes from './components'
+export class App extends Component {
  
   render () {
     let bodyContent = 'test'
@@ -170,6 +171,9 @@ class App extends Component {
             </div>
           </div>
         </footer>
+        <div id='routertest'>
+        {/* <Route path='/users' component={Users} /> */}
+        </div>
       </div>
     )
   }
