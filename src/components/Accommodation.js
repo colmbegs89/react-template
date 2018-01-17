@@ -1,19 +1,23 @@
 import React, { Component } from 'react'
+import TwitterTimeline from 'react-twitter-embedded-timeline'
+import Hotel from './Hotel.js'
+
+//Images
 import councillogo from '../img/dcsdc.png'
 import headerLogo1 from '../img/FMF-logo2018.png'
 import headerLogo2 from '../img/Homecoming-v2.png'
 import eventLogo1 from '../img/visit-derry.png'
 import eventLogo2 from '../img/clipper18.png'
-//Hotel Images
+
+//Hotel Images - for generator
 import hotel1 from '../img/travel-lodge.jpg'
 
-import TwitterTimeline from 'react-twitter-embedded-timeline'
-import Hotel from './Hotel.js'
 
 export class Accommodation extends Component {
-
+//Add html for the body in the function below
   getDefinedBody () {
     let breadcrumb = 'Accommodation Offers'
+    //example of the json array
     const hotelData = [
       {
         title:'Derry City Travelodge Hotel',
@@ -73,6 +77,7 @@ export class Accommodation extends Component {
   }
  
   render () {
+     //below are exmaple of the tags that can be used...edit or remove as neccessary
     let pageHeader = 'Accommodation'
     let bodyContent = this.getDefinedBody()
     let headerAlt1 = 'Foyle Maritime Festival 2018'
@@ -106,8 +111,6 @@ export class Accommodation extends Component {
                       <li><a className='navText' href='/about' >About</a></li>
                       <li className=' divider'></li>
                       <li><a className='navText' href='/accommodation' >Your Stay</a></li>
-                      <li className='divider'></li>
-                      <li><a className='navText' href='/yourboat' >Your Boat</a></li>
                     </ul>
                   </li>
                   <li><a className='navText' href='/contact' >Contact</a></li>

@@ -1,4 +1,7 @@
 import React from 'react'
+
+//Example of how to make a basic json object array processor which outputs html
+
 const processDataArray = (props) => {
   let hotelInfo = props.hotelInformation.map(function (data, i) {
     return (
@@ -21,6 +24,8 @@ const processDataArray = (props) => {
   })
   return hotelInfo
 }
+
+//how to use that processor
 const Hotel = (props) => {
   return (
     <div id='hotels'>

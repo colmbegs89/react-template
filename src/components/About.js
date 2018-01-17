@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
+import TwitterTimeline from 'react-twitter-embedded-timeline'
+
+//images
 import councillogo from '../img/dcsdc.png'
 import headerLogo1 from '../img/FMF-logo2018.png'
 import headerLogo2 from '../img/Homecoming-v2.png'
 import eventLogo1 from '../img/visit-derry.png'
 import eventLogo2 from '../img/clipper18.png'
 import pageImage from '../img/about.jpg'
-import TwitterTimeline from 'react-twitter-embedded-timeline'
 
 export class About extends Component {
 
@@ -45,6 +47,8 @@ export class About extends Component {
 
 
   render () {
+    //below are exmaple of the tags that can be used...edit or remove as neccessary
+
     let pageHeader = 'About Us'
     let bodyContent = this.getDefinedBody()
     let headerAlt1 = 'Foyle Maritime Festival 2018'
@@ -79,8 +83,6 @@ export class About extends Component {
                       <li><a className='navText' href='/about' >About</a></li>
                       <li className=' divider'></li>
                       <li><a className='navText' href='/accommodation' >Your Stay</a></li>
-                      <li className='divider'></li>
-                      <li><a className='navText' href='/yourboat' >Your Boat</a></li>
                     </ul>
                   </li>
                   <li><a className='navText' href='/contact' >Contact</a></li>
@@ -206,7 +208,6 @@ export class About extends Component {
           </div>
         </footer>
     </div>
-
     )
   }
 }

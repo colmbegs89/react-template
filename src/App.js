@@ -11,14 +11,18 @@ import eventLogo2 from './img/clipper18.png'
 import TwitterTimeline from 'react-twitter-embedded-timeline'
 
 export class App extends Component {
+  //Place the body inside of the 'bodyDiv'
+  getDefinedBody () {
+    return (
+     <div className='bodyDiv'>
+     </div>
+    )
+  }
 
- test () {
-   return (
-     <div>TEST</div>
-   )
- }
   render () {
-    let bodyContent = this.test()
+    //below are exmaple of the tags that can be used...edit or remove as neccessary
+
+    let bodyContent = this.getDefinedBody()
     let headerAlt1 = 'Foyle Maritime Festival 2018'
     let headerAlt2 = 'Join Homecoming July 2018'
     let eventAlt2 = 'Clipper 17-18'
@@ -51,8 +55,6 @@ export class App extends Component {
                         <li><a className='navText' href='/about' >About</a></li>
                         <li className=' divider'></li>
                         <li><a className='navText' href='/accommodation' >Your Stay</a></li>
-                        <li className='divider'></li>
-                        <li><a className='navText' href='/yourboat' >Your Boat</a></li>
                       </ul>
                     </li>
                     <li><a className='navText' href='/contact' >Contact</a></li>

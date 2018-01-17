@@ -1,7 +1,9 @@
 .App {
     text-align: center;
   }
-
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
   .fa:hover {
       opacity: 0.7;
   }
