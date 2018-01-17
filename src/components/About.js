@@ -17,7 +17,7 @@ export class About extends Component {
    return (
     <div className='bodyDiv'>
     <div className=' col-lg-1 col-md-1 col-sm-1'/>
-      <div className='bodyDiv center-block col-lg-10 col-md-19 col-sm-10 col-xs-12'>
+      <div className='center-block col-lg-10 col-md-19 col-sm-10 col-xs-12'>
         <ol className="breadcrumb">
           <li><a href="/">Home</a></li>
           <li className="active">{breadcrumb}</li>
