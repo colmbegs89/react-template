@@ -42,8 +42,6 @@ export class NotFound extends Component {
                       <li><a className='navText' href='/about' >About</a></li>
                       <li className=' divider'></li>
                       <li><a className='navText' href='/accommodation' >Your Stay</a></li>
-                      <li className='divider'></li>
-                      <li><a className='navText' href='/yourboat' >Your Boat</a></li>
                     </ul>
                   </li>
                   <li><a className='navText' href='/contact' >Contact</a></li>
