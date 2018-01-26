@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import Carousel from './components/Carousel.js'
+import Clock from './components/Clock.js'
 
 // Images
 import councillogo from './img/dcsdc.png'
@@ -18,6 +19,7 @@ export class App extends Component {
      </div>
     )
   }
+
 
   render () {
     //below are exmaple of the tags that can be used...edit or remove as neccessary
@@ -39,12 +41,8 @@ export class App extends Component {
     return (
       <div className='App '>
         <header>
-          <div className='container-fluid'>
-            <img id='headerLogo' src={headerLogo1} className='col-xs-6 col-sm-6 col-md-5 col-lg-5' alt={headerAlt1} />
-            <img id='headerLogo' src={headerLogo2} className='col-xs-6 col-sm-6 col-md-6 col-lg-6' alt={headerAlt2} />
-          </div>
-          <div className='nav-wrapper' >
-            <nav className='navbar ' >
+          <div className='nav-wrapper ' >
+            <nav className='navbar top-bar ' >
               <div className='container'>
                 <div className='collapse navbar-collapse' >
                   <ul className='nav navbar-nav navbar-right'>
@@ -64,7 +62,7 @@ export class App extends Component {
             </nav>
           </div>
         </header>
-        <div id='body' className='row'>
+        <div id='body' className='body row'>
           <div className='container-fluid'>
             <Carousel />
           </div>
@@ -74,6 +72,9 @@ export class App extends Component {
             <div className='row'>
               <div className='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
                 {bodyContent}
+                <div>
+                  <Clock />
+      </div>
               </div>
             </div>
           </div>
@@ -94,53 +95,7 @@ export class App extends Component {
         <footer>
           <div className='container'>
             <div className='row col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-              <div className='col-lg-3 col-md-3'>
-                <h3>GET SOCIAL</h3>
-                <p>{socialHashtags}</p>
-                <ul className='list-inline list-unstyled social-networks'>
-                  <li>
-                    <a href={facebookUrl}>
-                      <div className='icon-social icon-social-facebook normal'>
-                        <i className='fa fa-facebook'></i>
-                      </div>
-                      <div className='icon-social hover'>
-                        <i className='fa fa-facebook'></i>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={twitterUrl}>
-                      <div className='icon-social icon-social-twitter normal'>
-                        <i className='fa fa-twitter'></i>
-                      </div>
-                      <div className='icon-social hover'>
-                        <i className='fa fa-twitter'></i>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={youtubeUrl}>
-                      <div className='icon-social icon-social-youtube normal'>
-                        <i className='fa fa-youtube'></i>
-                      </div>
-                      <div className='icon-social hover'>
-                        <i className='fa fa-youtube'></i>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={instagramUrl}>
-                      <div className='icon-social icon-social-instagram normal'>
-                        <i className='fa fa-instagram'></i>
-                      </div>
-                      <div className='icon-social hover'>
-                        <i className='fa fa-instagram'></i>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className='col-lg-3 col-md-3'>
+              <div className='col-lg-4 col-md-4'>
                 <h3>CONTACT</h3>
                 <address>
                   <i className='fa fa-map-marker'></i> Derry City and Strabane District Council<br/>
@@ -151,13 +106,13 @@ export class App extends Component {
                   <a href={'mailto:' + mailToAddress}>{mailToAddress}</a>
                 </address>
               </div>
-              <div className='col-lg-3 col-md-3'>
+              <div className='col-lg-4 col-md-4'>
                 <h3>LATEST TWEETS</h3>
                 <div id='tweeter' className='twitter-timeline twitter-timeline-rendered'>
                   <TwitterTimeline widgetId={twitterWidget} chrome='noborders noheader' height={300} />
                 </div>
               </div>
-              <div className='col-lg-3 col-md-3'>
+              <div className='col-lg-4 col-md-4'>
                 <h3>NEWSLETTER            </h3>
                 <div className='input-group'>
                   <link href='//cdn-images.mailchimp.com/embedcode/slim-081711.css' rel='stylesheet' type='text/css'/>
@@ -179,6 +134,39 @@ export class App extends Component {
             </div>
           </div>
         </footer>
+
+        <div>
+          <ul id="social_side_links">
+            <li>
+              <a href={facebookUrl}>
+              <div className='icon-social icon-social-facebook normal'>
+              <i className='fa fa-facebook'></i>
+              </div>
+              </a>
+            </li>
+            <li>
+              <a href={twitterUrl}>
+              <div className='icon-social icon-social-twitter normal'>
+              <i className='fa fa-twitter'></i>
+              </div>
+              </a>
+            </li>
+            <li>
+              <a href={youtubeUrl}>
+              <div className='icon-social icon-social-youtube normal'>
+              <i className='fa fa-youtube'></i>
+              </div>
+              </a>
+            </li>
+            <li>
+              <a href={instagramUrl}>
+              <div className='icon-social icon-social-instagram normal'>
+              <i className='fa fa-instagram'></i>
+              </div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     )
   }

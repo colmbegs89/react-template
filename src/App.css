@@ -1,6 +1,169 @@
 .App {
     text-align: center;
   }
+
+
+  #social_side_links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 99;
+  }
+  
+  #social_side_links li a {
+    display: block;
+  }
+  
+  #social_side_links li a img {
+    display: block;
+    max-width:40px;
+    padding: 10px;
+    -webkit-transition:  background .2s ease-in-out;
+    -moz-transition:  background .2s ease-in-out;
+    -o-transition:  background .2s ease-in-out;
+    transition:  background .2s ease-in-out;
+  }
+  
+  #social_side_links li a:hover img {
+    background: rgba(0, 0, 0, .2);
+  }
+  
+  .social-networks li{
+    padding: 0;
+  }
+  
+  .social-networks li a{
+    width: 30px;
+    height: 31px;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .social-networks div.icon-social{
+    width: 30px;
+    text-align: center;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 15px;
+    background-color: #2c9d0a;
+  }
+  
+  .icon-social-facebook.normal{
+    color: #FFF;
+    font-size: 20px;
+    background: #3B5998;
+    width: 30px;
+    height: 31px;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+
+.icon-social-twitter.normal{
+    color: #FFF;
+    font-size: 20px;
+    background: #00CEFD;
+    width: 30px;
+    height: 31px;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+.icon-social-google-plus.normal{
+    color: #FFF;
+    background: #D64136;
+    width: 30px;
+    height: 31px;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .icon-social-pinterest.normal{
+    font-size: 20px;
+    color: #FFF;
+    background: #C32021;
+    width: 30px;
+    height: 31px;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+.icon-social-linkedin.normal{
+  font-size: 20px;
+    color: #FFF;
+    background: #0077B5;
+    width: 30px;
+    height: 31px;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+ .icon-social-youtube.normal{
+  font-size: 20px;
+    color: #FFF;
+    background: #CF3427;
+    width: 30px;
+    height: 31px;
+    display: inline-block;
+    overflow: hidden;
+  }
+ .icon-social-instagram.normal{
+  font-size: 20px;
+    color: #FFF;
+    background: #fb3958;
+    width: 30px;
+    height: 31px;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+ .icon-social.hover{
+  font-size: 20px;
+    background: #2c3e50;
+    width: 30px;
+    height: 31px;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  /* none sidebar social icons */
+  .social-networks div.icon-social.icon-social-facebook.normal{
+    color: #FFF;
+    background: #3B5998;
+  }
+  
+  .social-networks div.icon-social.icon-social-twitter.normal{
+    color: #FFF;
+    background: #00CEFD;
+  }
+  
+  .social-networks div.icon-social.icon-social-google-plus.normal{
+    color: #FFF;
+    background: #D64136;
+  }
+  
+  .social-networks div.icon-social.icon-social-pinterest.normal{
+    color: #FFF;
+    background: #C32021;
+  }
+  
+  .social-networks div.icon-social.icon-social-linkedin.normal{
+    color: #FFF;
+    background: #0077B5;
+  }
+  
+  .social-networks div.icon-social.icon-social-youtube.normal{
+    color: #FFF;
+    background: #CF3427;
+  }
+  
+  .social-networks div.icon-social.hover{
+    color: #FFF;
+    background: #2c3e50;
+  }
+  
   .dropdown:hover .dropdown-menu {
     display: block;
   }
@@ -260,55 +423,7 @@
     font-family: 'open_sansbold';
     margin: 0 0 20px 0;
   }
-  
-  .social-networks li{
-    padding: 0;
-  }
-  
-  .social-networks li a{
-    width: 30px;
-    height: 31px;
-    display: inline-block;
-    overflow: hidden;
-  }
-  
-  .social-networks div.icon-social{
-    width: 30px;
-    text-align: center;
-    color: #FFF;
-    padding: 8px 0;
-    font-size: 14px;
-    line-height: 15px;
-    background-color: #2c9d0a;
-  }
-  
-  .social-networks div.icon-social.icon-social-facebook.normal{
-    background: #3B5998;
-  }
-  
-  .social-networks div.icon-social.icon-social-twitter.normal{
-    background: #00CEFD;
-  }
-  
-  .social-networks div.icon-social.icon-social-google-plus.normal{
-    background: #D64136;
-  }
-  
-  .social-networks div.icon-social.icon-social-pinterest.normal{
-    background: #C32021;
-  }
-  
-  .social-networks div.icon-social.icon-social-linkedin.normal{
-    background: #0077B5;
-  }
-  
-  .social-networks div.icon-social.icon-social-youtube.normal{
-    background: #CF3427;
-  }
-  
-  .social-networks div.icon-social.hover{
-    background: #2c3e50;
-  }
+
   
   .latest-tweets{
     margin: 0;
