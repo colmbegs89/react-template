@@ -73,8 +73,8 @@ export class App extends Component {
               <div className='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
                 {bodyContent}
                 <div>
-                  <Clock />
-      </div>
+                  <Clock deadline='May 3, 2018'/>
+              </div>
               </div>
             </div>
           </div>
