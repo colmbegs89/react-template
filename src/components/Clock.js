@@ -40,12 +40,30 @@ export class Clock extends Component {
 render () {
 
   return (
-    <div className='row' >
-        <p className='clock-days col-lg-2 col-md-2 col-sm-2 col-xs-2'>{this.leadingZero(this.state.days)} </p>
-        <p className='clock-hours col-lg-2 col-md-2 col-sm-2 col-xs-2'>{this.leadingZero(this.state.hours)} </p>
-        <p className='clock-minutes col-lg-2 col-md-2 col-sm-2 col-xs-2'>{this.leadingZero(this.state.minutes)} </p>
+    <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 offset-md-6 col-lg-6 offset-lg-6">
+      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 card text-center" style={{backgroundColor:"black", color: "white"}}>
+        <div className="card-block">
+          <p className="card-text text-center">Days</p>
+          <h3 className="card-title text-center" style={{color: "white"}}>{this.leadingZero(this.state.days)}</h3>
+        </div>
+      </div>
+      <div className="col-lg-1 col-md-1 col-sm-1 col-xs-1  text-center">
+        </div>
+      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 card text-center" style={{backgroundColor:"black", color: "white"}}>
+        <div className="card-block">
+          <p className="card-text text-center">Hours</p>
+          <h3 className="card-title text-center" style={{color: "white"}}>{this.leadingZero(this.state.hours)}</h3>
+        </div>
+      </div>
+      <div className="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">
+        </div>
+      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 card text-center responsive" style={{backgroundColor:"black", color: "white"}}>
+        <div className="card-block">
+          <p className="card-text text-center">Minutes</p>
+          <h3 className="card-title text-center" style={{color: "white"}}>{this.leadingZero(this.state.minutes)}</h3>
+        </div>
+      </div>
     </div>
-
     )
   }
 }

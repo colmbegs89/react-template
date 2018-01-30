@@ -1,28 +1,33 @@
 import React, { Component } from 'react'
-import councillogo from '../img/dcsdc.png'
-import headerLogo1 from '../img/FMF-logo2018.png'
-import headerLogo2 from '../img/Homecoming-v2.png'
-import eventLogo1 from '../img/visit-derry.png'
-import eventLogo2 from '../img/clipper18.png'
-import pageImage from '../img/about.jpg'
 import TwitterTimeline from 'react-twitter-embedded-timeline'
-import Navigation from './Navigation.js'
-import Social from './Social.js'
 
-export class NewPage extends Component {
+//images
+import councillogo from '../../img/dcsdc.png'
+import headerLogo1 from '../../img/FMF-logo2018.png'
+import headerLogo2 from '../../img/Homecoming-v2.png'
+import eventLogo1 from '../../img/visit-derry.png'
+import eventLogo2 from '../../img/clipper18.png'
+import pageImage from '../../img/about.jpg'
+import Navigation from '../Navigation.js'
+import Social from '../Social.js'
+
+export class GettingHere extends Component {
 
   //Place the body inside of the 'bodyDiv'
  getDefinedBody () {
-   let breadcrumb = 'NewPage'
+   let breadcrumb = 'About Derry~Londonderry'
    return (
     <div className='bodyDiv'>
+    
     </div>
    )
  }
 
+
   render () {
     //below are exmaple of the tags that can be used...edit or remove as neccessary
-    let pageHeader = 'New Page'
+
+    let pageHeader = 'Getting Here'
     let bodyContent = this.getDefinedBody()
     let headerAlt1 = 'Foyle Maritime Festival 2018'
     let headerAlt2 = 'Join Homecoming July 2018'
@@ -38,32 +43,10 @@ export class NewPage extends Component {
 
 
     return (
-      <div className='NewPage'>
+      <div className='GettingHere'>
         <header>
-        <div className='container-fluid'>
-          <img id='headerLogo' src={headerLogo1} className='col-xs-6 col-sm-6 col-md-5 col-lg-5' alt={headerAlt1} />
-          <img id='headerLogo' src={headerLogo2} className='col-xs-6 col-sm-6 col-md-6 col-lg-6' alt={headerAlt2} />
-        </div>
-        <div className='nav-wrapper' >
-          <nav className='navbar ' >
-            <div className='container'>
-              <div className='collapse navbar-collapse' >
-                <ul className='nav navbar-nav navbar-right'>
-                  <li><a className='navText' href='/' >Home</a></li>
-                  <li className='dropdown'>
-                    <a className='dropdown-toggle navText' data-toggle='dropdown'>Our Story </a>
-                    <ul className='dropdown-menu navText'>
-                      <li><a className='navText' href='/about' >About</a></li>
-                      <li className=' divider'></li>
-                      <li><a className='navText' href='/accommodation' >Your Stay</a></li>
-                    </ul>
-                  </li>
-                  <li><a className='navText' href='/contact' >Contact</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
+              <Navigation />
+
       </header>
       <div className="section-header">
       <div className="container">
@@ -140,4 +123,4 @@ export class NewPage extends Component {
   }
 }
 
-export default NewPage
+export default GettingHere

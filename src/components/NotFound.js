@@ -5,7 +5,8 @@ import headerLogo2 from '../img/Homecoming-v2.png'
 import eventLogo1 from '../img/visit-derry.png'
 import eventLogo2 from '../img/clipper18.png'
 import TwitterTimeline from 'react-twitter-embedded-timeline'
-
+import Navigation from './Navigation.js'
+import Social from './Social.js'
 export class NotFound extends Component {
  
   render () {
@@ -81,56 +82,10 @@ export class NotFound extends Component {
             </div>
           </div>
         </div>
-    <footer>
+        <footer>
           <div className='container'>
             <div className='row col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-              <div className='col-lg-3 col-md-3'>
-                <h3>GET SOCIAL</h3>
-                <p>{socialHashtags}</p>
-                <ul className='list-inline list-unstyled social-networks'>
-                  <li>
-                    <a href={facebookUrl}>
-                      <div className='icon-social icon-social-facebook normal'>
-                        <i className='fa fa-facebook'></i>
-                      </div>
-                      <div className='icon-social hover'>
-                        <i className='fa fa-facebook'></i>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={twitterUrl}>
-                      <div className='icon-social icon-social-twitter normal'>
-                        <i className='fa fa-twitter'></i>
-                      </div>
-                      <div className='icon-social hover'>
-                        <i className='fa fa-twitter'></i>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={youtubeUrl}>
-                      <div className='icon-social icon-social-youtube normal'>
-                        <i className='fa fa-youtube'></i>
-                      </div>
-                      <div className='icon-social hover'>
-                        <i className='fa fa-youtube'></i>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href={instagramUrl}>
-                      <div className='icon-social icon-social-instagram normal'>
-                        <i className='fa fa-instagram'></i>
-                      </div>
-                      <div className='icon-social hover'>
-                        <i className='fa fa-instagram'></i>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className='col-lg-3 col-md-3'>
+              <div className='col-lg-4 col-md-4'>
                 <h3>CONTACT</h3>
                 <address>
                   <i className='fa fa-map-marker'></i> Derry City and Strabane District Council<br/>
@@ -141,13 +96,13 @@ export class NotFound extends Component {
                   <a href={'mailto:' + mailToAddress}>{mailToAddress}</a>
                 </address>
               </div>
-              <div className='col-lg-3 col-md-3'>
+              <div className='col-lg-4 col-md-4'>
                 <h3>LATEST TWEETS</h3>
                 <div id='tweeter' className='twitter-timeline twitter-timeline-rendered'>
                   <TwitterTimeline widgetId={twitterWidget} chrome='noborders noheader' height={300} />
                 </div>
               </div>
-              <div className='col-lg-3 col-md-3'>
+              <div className='col-lg-4 col-md-4'>
                 <h3>NEWSLETTER            </h3>
                 <div className='input-group'>
                   <link href='//cdn-images.mailchimp.com/embedcode/slim-081711.css' rel='stylesheet' type='text/css'/>
@@ -169,6 +124,7 @@ export class NotFound extends Component {
             </div>
           </div>
         </footer>
+        <Social />
     </div>
 
     )
