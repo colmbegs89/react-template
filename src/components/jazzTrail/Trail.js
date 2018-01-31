@@ -10,6 +10,7 @@ import eventLogo2 from '../../img/clipper18.png'
 import pageImage from '../../img/about.jpg'
 import Navigation from '../Navigation.js'
 import Social from '../Social.js'
+import Map from '../Map.js'
 
 export class Trail extends Component {
 
@@ -17,9 +18,7 @@ export class Trail extends Component {
  getDefinedBody () {
    let breadcrumb = 'About Derry~Londonderry'
    return (
-    <div className='bodyDiv'>
-   
-    </div>
+    <Map />
    )
  }
   render () {
@@ -46,6 +45,8 @@ export class Trail extends Component {
         <Navigation />
 
       </header>
+      <div id='body' className='body row'>
+
       <div className="section-header">
       <div className="container">
         <div className="row">
@@ -116,6 +117,7 @@ export class Trail extends Component {
           </div>
         </footer>
         <Social />
+    </div>
     </div>
     )
   }

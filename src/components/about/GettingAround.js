@@ -49,6 +49,7 @@ export class GettingAround extends Component {
         <Navigation />
 
       </header>
+      <div id='body' className='body row'>
       <div className="section-header">
       <div className="container">
         <div className="row">
@@ -62,6 +63,7 @@ export class GettingAround extends Component {
           <div className='container'>
             <div className='row'>
                 {bodyContent}
+                
             </div>
           </div>
         </div>
@@ -119,6 +121,7 @@ export class GettingAround extends Component {
           </div>
         </footer>
         <Social />
+    </div>
     </div>
     )
   }

@@ -46,6 +46,8 @@ export class Started extends Component {
         <Navigation />
 
       </header>
+      <div id='body' className='body row'>
+
       <div className="section-header">
       <div className="container">
         <div className="row">
@@ -116,6 +118,7 @@ export class Started extends Component {
           </div>
         </footer>
         <Social />
+    </div>
     </div>
     )
   }
