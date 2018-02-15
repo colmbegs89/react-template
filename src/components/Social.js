@@ -13,7 +13,7 @@ export class Social extends Component {
       <div>
       <ul id="social_side_links">
         <li>
-          <a href={facebookUrl}>
+          <a href='https://www.facebook.com/foylemaritimefestival'>
           <div className='icon-social icon-social-facebook normal'>
           <i className='fa fa-facebook'></i>
           </div>
