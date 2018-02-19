@@ -14,7 +14,7 @@
   "keywords": [
     "react"
   ],
-  "homepage" : "/",
+  "homepage": "/",
   "author": "Colm Begley",
   "license": "ISC",
   "dependencies": {

@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import About from './About'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import Hotel from './Hotel.js'
