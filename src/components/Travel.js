@@ -4,25 +4,21 @@ import React, { Component } from 'react'
 // Images
 import mileage from '../img/mileage.png'
 import travel from '../img/travel.png'
+import { Navigation } from './Navigation';
 
 export class App extends Component {
   showSettings (event) {
     event.preventDefault();
   }
  
-  render () {
+  getContent () {
     
     return (
-<div className='App '>
+<div >
         <header>
-          {/* <div className='pageHead container-fluid' >
-            <img className='col-md-3 councilLogo' src={councillogo} alt="DCSDC"/>
-          </div> */}
-          {/* <Navigation/> */}
         </header>
       
-<div className="container-fluid mainApp">
-  <div className="row">
+<div >
     <div className="col-sm-6">
       <div className="row">
         <div className="col-sm-12">
@@ -39,7 +35,6 @@ export class App extends Component {
       </div>
       </div>
       <div className="col-sm-6">
-
       <div className="row">
         <div className="col-sm-12">
         <a href='http://www.councilintranet.com:8080/Claimforms/travel%20claim%20form.docx'>
@@ -51,9 +46,9 @@ export class App extends Component {
           </div>
           </a>
         </div>
-        <div className="col-xs-12 col-sm-6">
+        <div className="col-xs-12 col-sm-12">
       <div className="row">
-        <div className="col-sm-12 col-xs-6">
+        <div className="col-sm-12 col-xs-12">
         <a href='http://www.theaa.com/driving/mileage-calculator.jsp'>
           <div className="alert alert-success alert-bottom">
             <img src={mileage} alt='Mileage Calculator ' className='med-img'></img>
@@ -68,8 +63,21 @@ export class App extends Component {
     </div>
       </div>
     </div>
-  </div>
 </div>
+    )
+  }
+
+  render () {
+    return (
+      <div className='App'>
+        <header>
+        </header>
+          <Navigation content={this.getContent()} />
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <div>
+        </div>
+      </div>
     )
   }
 }
